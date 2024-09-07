@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Danych</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="forms-container">
+            <form id="dataForm">
+                <h2>Dodaj Dane</h2>
+                <label for="nrb">Numer boczny:</label>
+                <input type="text" id="nrb" name="nrb" required>
+
+                <label for="prod">Producent:</label>
+                <input type="text" id="prod" name="prod" required>
+
+                <label for="model">Typ:</label>
+                <input type="text" id="model" name="model" required>
+
+                <label for="mod">Modernizacje (opcjonalnie):</label>
+                <input type="text" id="mod" name="mod">
+
+                <label for="photo">Zdjęcia (opcjonalnie):</label>
+                <input type="url" id="photo" name="photo">
+
+                <label for="info">Informacje Dodatkowe (opcjonalnie):</label>
+                <textarea id="info" name="info" placeholder="Numer boczny doczepy...&#10;Stan techniczny...&#10;Data powstania/kasacji..."></textarea>
+
+                <span id="message" class="message"></span>
+                <button type="submit">Zapisz</button>
+            </form>
+            
+            <form id="searchForm">
+                <h2>Wyszukaj Dane</h2>
+                <label for="searchNrb">Numer Boczny:</label>
+                <input type="text" id="searchNrb" name="searchNrb" required>
+                <button type="button" id="searchBtn">Szukaj</button>
+            </form>
+        </div>
+        
+        <div id="output"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
