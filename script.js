@@ -46,17 +46,19 @@ document.getElementById('searchBtn').addEventListener('click', function() {
             return response.json();
         })
         .then(data => {
+            console.log('Data received:', data);
+
             let output = `<h2>Dane dla wagonu o numerze: ${searchNrb}</h2>`;
             output += `<p>Producent: ${data.prod}</p>`;
             output += `<p>Typ: ${data.model}</p>`;
             output += `<p>Modernizacje: ${data.mod || 'Brak'}</p>`;
             output += `<p>Zdjęcie: ${data.photo ? `<a href="${data.photo}">Zdjęcie</a>` : 'Brak'}</p>`;
             output += `<p>Informacje dodatkowe: ${data.info ? `<pre>${data.info}</pre>` : 'Brak'}</p>`;
-            document.getElementById('searchResult').innerHTML = output;
+
+            document.getElementById('output').innerHTML = output;
         })
         .catch(error => {
             console.error('Error:', error);
-            document.getElementById('searchResult').innerHTML = `<p style="color: red;">Danych dla numeru bocznego: ${searchNrb} nie znaleziono.</p>`;
+            document.getElementById('output').innerHTML = `<p style="color: red;">Danych dla numeru bocznego: ${searchNrb} nie znaleziono.</p>`;
         });
 });
-
