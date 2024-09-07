@@ -1,4 +1,4 @@
-const dataFileUrl = 'https://backend-sigma-rose.vercel.app/data.json';
+const dataFileUrl = 'https://backend-sigma-rose.vercel.app/data';
 
 document.getElementById('dataForm').addEventListener('submit', function(e) {
     e.preventDefault();
