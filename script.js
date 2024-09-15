@@ -1,4 +1,24 @@
 const dataFileUrl = 'https://backend-sigma-rose.vercel.app/data';
+function updateCountdown() {
+            const now = new Date();
+            let targetTime = new Date();
+            targetTime.setHours(21, 37, 0, 0);
+
+            if (now > targetTime) {
+                targetTime.setDate(targetTime.getDate() + 1);
+            }
+
+            const diff = targetTime - now;
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            const countdownText = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('iledod').textContent = countdownText;
+        }
+
+        setInterval(updateCountdown, 1000);
+        window.onload = updateCountdown;
 
 document.getElementById('dataForm').addEventListener('submit', function(e) {
     e.preventDefault();
