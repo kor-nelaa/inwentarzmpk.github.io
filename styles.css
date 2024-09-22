@@ -19,13 +19,20 @@ h1 {
     margin-bottom: 20px;
 }
 
-#th3 {
-    font-size: 1.17em; /* Same as h3 font size */
-    font-weight: bold; /* Bold text */
-    color: inherit; /* Inherit color from parent, or set to a specific color */
-    text-decoration: none; /* Remove underline */
-    margin: 1em 0; /* Add margin if needed */
-    display: block; /* Make it a block element if you want it to behave like a heading */
+a:link, a:visited {
+  background-color: #fefefe;
+  font-family: 'Arial';
+  font-size: 1.17em;
+  border: 3px solid #b2ffab;
+  padding: 9px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: #fefefe;
+  border: 3px solid #b2ffab;
 }
 
 
